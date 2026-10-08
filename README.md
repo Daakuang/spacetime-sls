@@ -2,36 +2,27 @@
 
 Code and data accompanying the paper by **Chenchen Zhou and José Matias**.
 
-Start with **`reproduce.py`** to run the computations and generate the plots.
-Use Python 3.11 or newer and run the following commands from this folder:
+Use Python 3.11 or newer. From this folder, install the dependencies and run:
 
 ```sh
 python -m pip install -r requirements.txt
 python reproduce.py
 ```
 
-This generates numerical Figures 4–7 (PDF and PNG) and Table I (CSV and JSON)
-in `results/paper/`, using the supplied data in `data/`.
+This generates Figures 4–7 (PDF and PNG) and Table I (CSV) in `results/paper/`
+from the supplied data.
 
-To recompute all experiments from the model and generate the figures and table:
-
-```sh
-python reproduce.py recompute
-```
-
-Results are saved in `results/recompute/`. This includes the large exact-SLS
-quadratic programs and can take substantial time.
-
-To try an individual controller on a smaller mesh:
+To recompute the experiments from the model and then generate the same outputs:
 
 ```sh
-python reproduce.py exact --side 3 --kappa 1 --footprint 1 --memory 5
-python reproduce.py direct --side 3 --kappa 2 --footprint 2 --memory 0
+python reproduce.py --recompute
 ```
 
-`--memory` is the last filter tap `T`; the response horizon is `T+1`.
-Dynamic direct-controller costs use finite response prefixes. Exact solves
-use all disturbance sources unless `--sources` is specified; selected-source
-costs describe those sources only. Run `python reproduce.py --help` for options.
+Results are saved in `results/recompute/`. Recomputing all exact-SLS quadratic
+programs can take substantial time. Dynamic-controller costs use 880 response
+terms; the static-controller cost uses a Lyapunov equation.
+
+`reproduce.py` is the only entry point. The model and solvers are in `control.py`,
+the experiments in `experiments.py`, and the plots in `plotting.py`.
 
 BSD-3-Clause license; see `LICENSE`.
