@@ -2,7 +2,7 @@
 
 Code and data accompanying the paper by **Chenchen Zhou and José Matias**.
 
-Use Python 3.11 or newer. From this folder, install the dependencies and run:
+Use Python 3.12. From this folder, install the dependencies and run:
 
 ```sh
 python -m pip install -r requirements.txt
