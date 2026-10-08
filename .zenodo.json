@@ -1,0 +1,18 @@
+{
+  "title": "Code for \"Spatiotemporal Response Decay for Near-Optimal Distributed LQR via System Level Synthesis\"",
+  "upload_type": "software",
+  "description": "Code and data accompanying the paper by Chenchen Zhou and José Matias. Run reproduce.py to reproduce Figures 4–7 and Table I. The implementation includes the thermal-mesh model, direct response truncation, exact localized System Level Synthesis, and the numerical experiments and plotting routines.",
+  "creators": [
+    {
+      "name": "Zhou, Chenchen",
+      "affiliation": "KU Leuven"
+    },
+    {
+      "name": "Matias, José",
+      "affiliation": "KU Leuven"
+    }
+  ],
+  "license": "bsd-3-clause",
+  "version": "1.0.0",
+  "publication_date": "2026-10-08"
+}
