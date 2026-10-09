@@ -1,6 +1,6 @@
 # Spatiotemporal Response Decay for Near-Optimal Distributed LQR via System Level Synthesis
 
-Code and data accompanying the paper by **Chenchen Zhou and José Matias**.
+Code and data accompanying the [paper](https://arxiv.org/abs/2610.11699) by **Chenchen Zhou and José Matias**.
 
 Use Python 3.12. From this folder, install the dependencies and run:
 
